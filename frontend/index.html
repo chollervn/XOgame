@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XO AI - 5 in a Row</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-left" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-right" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <section class="panel">
+        <h1>XO AI Arena</h1>
+        <p class="subtitle">Play 5-in-a-row against a Python AI.</p>
+
+        <div class="controls">
+          <label for="sizeSelect">Board</label>
+          <select id="sizeSelect">
+            <option value="7">7 x 7</option>
+            <option value="9" selected>9 x 9</option>
+            <option value="11">11 x 11</option>
+          </select>
+
+          <label for="difficultySelect">Difficulty</label>
+          <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+
+          <button id="newGameBtn" type="button">Start New Game</button>
+        </div>
+
+        <div class="status" id="statusBox">
+          <p id="roleInfo">You: X | AI: O</p>
+          <p id="turnInfo">Click Start New Game to begin.</p>
+          <p id="resultInfo"></p>
+        </div>
+      </section>
+
+      <section class="board-panel">
+        <div id="board" class="board" aria-label="XO Board"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
