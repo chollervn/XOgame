@@ -123,15 +123,17 @@ button:disabled {
   display: grid;
   grid-template-columns: repeat(var(--grid-size), var(--cell-size));
   grid-template-rows: repeat(var(--grid-size), var(--cell-size));
-  gap: 0;
-  background: transparent;
+  /* Tạo nét kẻ ô mỏng 1px chuẩn xác bằng nền đen */
+  gap: 1px;
+  background: #000;
   border: 2px solid #000;
 }
 
 .cell {
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
+  margin: 0;
+  border: none; /* Xóa viền của từng nút để không bị đè lên nhau */
   background: #fff;
   padding: 0;
   font-family: inherit;
