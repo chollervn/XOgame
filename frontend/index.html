@@ -1,47 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XO AI - 5 in a Row</title>
+    <title>Cờ XO AI - 5 quân liên tiếp</title>
     <link rel="stylesheet" href="/static/styles.css" />
+    <!-- Đã tách toàn bộ CSS inline ra file /static/styles.css -->
   </head>
   <body>
-    <div class="bg-glow bg-glow-left" aria-hidden="true"></div>
-    <div class="bg-glow bg-glow-right" aria-hidden="true"></div>
-
     <main class="app-shell">
       <section class="panel">
-        <h1>XO AI Arena</h1>
-        <p class="subtitle">Play 5-in-a-row against a Python AI.</p>
+        <h1>Cờ XO AI</h1>
+        <p class="subtitle">5 ô liên tiếp</p>
 
         <div class="controls">
-          <label for="sizeSelect">Board</label>
+          <label for="sizeSelect">Kích thước bàn</label>
           <select id="sizeSelect">
             <option value="7">7 x 7</option>
             <option value="9" selected>9 x 9</option>
             <option value="11">11 x 11</option>
           </select>
 
-          <label for="difficultySelect">Difficulty</label>
+          <label for="difficultySelect">Độ khó</label>
           <select id="difficultySelect">
-            <option value="easy">Easy</option>
-            <option value="medium" selected>Medium</option>
-            <option value="hard">Hard</option>
+            <option value="easy">Dễ</option>
+            <option value="medium" selected>Trung bình</option>
+            <option value="hard">Khó</option>
           </select>
 
-          <button id="newGameBtn" type="button">Start New Game</button>
+          <button id="newGameBtn" type="button">Ván mới</button>
         </div>
 
         <div class="status" id="statusBox">
-          <p id="roleInfo">You: X | AI: O</p>
-          <p id="turnInfo">Click Start New Game to begin.</p>
+          <p id="roleInfo">Bạn: X | AI: O</p>
+          <p id="turnInfo">Nhấn "Ván mới" để bắt đầu.</p>
           <p id="resultInfo"></p>
         </div>
       </section>
 
       <section class="board-panel">
-        <div id="board" class="board" aria-label="XO Board"></div>
+        <div id="board" class="board" aria-label="Bàn cờ XO"></div>
       </section>
     </main>
 

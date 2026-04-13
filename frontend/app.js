@@ -229,11 +229,11 @@ function renderStatus() {
 
   turnInfo.textContent = "Game finished.";
   if (state.status === "human_win") {
-    resultInfo.textContent = "You win.";
+    resultInfo.textContent = "Bạn thắng.";
   } else if (state.status === "ai_win") {
-    resultInfo.textContent = "AI wins.";
+    resultInfo.textContent = "AI thắng.";
   } else if (state.status === "draw") {
-    resultInfo.textContent = "Draw.";
+    resultInfo.textContent = "Hòa.";
   } else {
     resultInfo.textContent = "";
   }
